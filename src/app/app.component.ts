@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app1';
+    gameResult: string = ''
+    public gameGoing: boolean = true
+
+  finishGame(result: string){
+   this.gameGoing = false
+   this.gameResult = result
+  }
+  
+  public clearGame():void{
+    this.gameGoing = true
+    this.gameResult = ''
+  }
+
 }
